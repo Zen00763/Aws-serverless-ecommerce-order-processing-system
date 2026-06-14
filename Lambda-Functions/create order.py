@@ -7,7 +7,7 @@ table = dynamodb.Table('Orders')
 
 sqs = boto3.client('sqs')
 
-QUEUE_URL = "https://sqs.us-east-1.amazonaws.com/857876979780/OrderQueue"
+QUEUE_URL = "YOUR_QUEUE_URL"
 
 def lambda_handler(event, context):
 
@@ -34,7 +34,7 @@ def lambda_handler(event, context):
         table.put_item(Item=order)
 
         sqs.send_message(
-            QueueUrl="https://sqs.us-east-1.amazonaws.com/857876979780/OrderQueue",
+            QueueUrl="YOUR_QUEUE_URL",
             MessageBody=json.dumps(order)
         )
 
