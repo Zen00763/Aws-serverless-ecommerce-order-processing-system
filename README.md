@@ -59,15 +59,6 @@ Email Notification
 * Email notifications using Amazon SNS
 * Event-driven architecture
 
-## Repository Structure
-
-Documentation → Project PDF
-
-Frontend → HTML, CSS and JavaScript files
-
-Lambda-Functions → AWS Lambda source code
-
-Screenshots → Architecture and service screenshots
 
 ## Author
 
