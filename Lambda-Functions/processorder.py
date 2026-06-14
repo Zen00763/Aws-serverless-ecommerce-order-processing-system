@@ -3,7 +3,7 @@ import boto3
 
 sns = boto3.client('sns')
 
-TOPIC_ARN = "arn:aws:sns:us-east-1:857876979780:OrderNotifications"
+TOPIC_ARN = "YOUR_TOPIC_ARN"
 
 def lambda_handler(event, context):
 
@@ -14,7 +14,7 @@ def lambda_handler(event, context):
             order = json.loads(record['body'])
 
             sns.publish(
-                TopicArn="arn:aws:sns:us-east-1:857876979780:OrderNotifications",
+                TopicArn="YOUR_TOPIC_ARN",
                 Subject='New Order Processed',
                 Message=f"""
 ORDER RECEIVED
